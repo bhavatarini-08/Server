@@ -1,6 +1,7 @@
 const express= require('express')
 const app=express()
-
+const dbconn=require('./config/db')
+const Projects=require('./models/projectModel')
 require('dotenv').config()
 const port=process.env.PORT || 7778
 
