@@ -19,13 +19,14 @@ router.post('/add',async(req,res)=>{
     try {
         const newprojectdata=await Projects(req.body)
         const {title,desc}=newprojectdata
-        if(!title || !desc){
-            res.json({message:"Ttile & desc Required"}).status(500)
-        }
-        await Projects.create()
-        res.json({message:"Added"}).status(201)
+        // if(!title || !desc){
+        //     res.json({message:"Title & desc Required"}).status(500)
+        // }
+        // await Projects.create()
+        // res.json({message:"Added"}).status(201)
 
     } catch (error) {
         res.json(error).status(500)
     }
 })
+module.exports=router;
